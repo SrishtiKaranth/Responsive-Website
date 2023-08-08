@@ -1,0 +1,368 @@
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    height: 100%;
+}
+:root {
+    --main-color: #ecf5fc; 
+    --secondary-color: #ffe2b5;
+    --tertiary-color:rgb(96, 96, 96);
+    --accent:#f4bac6;
+  }
+
+.colormain{
+    color:var(--main-color);
+}
+
+.colorsec{
+    color:var(--secondary-color);
+}
+
+.colorter{
+    color:var(--tertiary-color);
+}
+.accent{
+    background: linear-gradient(45deg, #706bbe, #9767be);
+    -webkit-background-clip: text; /* For webkit-based browsers */
+    background-clip: text;
+    color: transparent;
+}
+
+header::before {
+    content: "";
+    background-image: url("clark-van-der-beken-kkeH0GaSq1g-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    filter: opacity(90%);
+    filter: brightness(95%);
+    
+}
+
+header {
+    position: flex;
+    justify-content: space-between;
+
+
+}
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(249, 249, 249, 0.11);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border: 1px solid rgba(249, 249, 249, 0.3);
+}
+
+nav {
+    /* border: 1px solid blue; */
+    padding: 0.5rem;
+}
+
+ul.navtabs {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.navitems {
+    /* border: 1px solid salmon; */
+    margin: 1rem;
+    font-weight: 600;
+
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+
+
+}
+
+.logotext {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+
+}
+
+#tagline {
+    font-size: 0.85rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+
+}
+
+.mainbody {
+    margin: 5rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin: 0;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.subcontent {
+    margin-top: 4vh;
+    font-size: 1.4rem;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 2rem;
+    margin: 1rem;
+}
+
+.box {
+    padding: 1rem;
+    text-align: justify;
+    font-weight: 600;
+
+}
+.boxcontent{
+    font-weight: 400;
+    color: var(--main-color)
+}
+.gallery{
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    align-items: center; /* Center vertically */
+    justify-items: center; /* Center horizontally */
+}
+
+
+.card {
+    width: 250px;
+    height: 350px;
+    /* border:1px solid salmon; */
+    overflow: hidden;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    color: var(--main-color);
+    border-radius: 10px;
+    /* align-self: center; */
+
+
+}
+
+img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+    filter: sepia(30%);
+}
+
+h4 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+p.contentofcard,
+a.anchor {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+    font-size: 0.85rem;
+}
+
+p.contentofcard {
+    inset: auto auto 80px 30px;
+    font-weight: 600;
+}
+
+a.anchor {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover .card-content h4 {
+    inset: auto auto 270px 30px;
+    transition: inset .3s ease-out;
+}
+
+.card:hover .card-content p.contentofcard,
+.card:hover .card-content a.anchor {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+.card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 0.45;
+    filter: brightness(20%);
+}
+
+.button {
+    background-color: var(--secondary-color);
+    padding: 4px;
+    border-radius: 5px;
+    color: black;
+}
+
+.final {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* If you want the container to cover the full viewport height */
+}
+
+.findmore {
+    background-color: var(--accent);
+    padding: 4px;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    padding:0.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 4rem;
+    color: black;
+}
+.findmore:hover{
+    cursor: pointer;
+}
+
+footer {
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    header::before {
+        filter: opacity(90%);
+        filter: brightness(80%);
+        
+    }
+
+    .accent{
+        background: linear-gradient(45deg, #ffe2b5, #f7ffca);
+        -webkit-background-clip: text; /* For webkit-based browsers */
+        background-clip: text;
+        color: transparent;
+    } 
+.colorter{
+    color:var(--main-color);
+}
+    ul.navtabs {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navitems {
+        margin: 1rem 0;
+        font-size: 1.05rem;
+    }
+
+    .logo {
+        margin-top: 4.45rem;
+        padding: 0.5rem;
+
+    }
+
+    .logotext {
+        font-weight: 600;
+        font-size: 2.2rem;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #tagline {
+        font-size: 0.85rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content {
+        font-size: 2.4rem;
+    }
+
+    .subcontent {
+        margin-top: 4vh;
+        font-size: 1rem;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 0;
+        grid-gap: 0.75rem;
+
+    }
+
+    .box {
+        padding: 1rem;
+        text-align: justify;
+        font-size: 0.85rem;
+
+    }
+
+    .gallery{
+        font-size: 1.55rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    footer {
+        font-size: 0.45rem;
+    }
+}
+
+@media (width:820px) {
+    .colorter{
+        color:var(--main-color);
+    }
+}
